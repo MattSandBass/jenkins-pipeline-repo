@@ -3,9 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Building..."'
-                sh 'ls -al'
-            }
+                sh "sh build.sh"
+             }
         }
         stage('Test') {
             steps {
@@ -14,10 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'cat ./deploy.sh'
-                sh 'echo "Deploying..."'
-                sh 'mv testfile.txt /tmp'
-                sh 'ls -l /tmp'
+                sh "sh deploy.sh"
             }
         }
     }
