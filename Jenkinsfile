@@ -9,10 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'echo "Testing..."'
-                sh 'pwd'
-                sh 'touch testfile.txt'
-                sh 'ls -l'
+                sh 'sh test.sh'
             }
         }
         stage('Deploy') {
