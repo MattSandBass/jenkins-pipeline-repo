@@ -1,3 +1,4 @@
+// jenkins excercise 2 to create standard pipeline
 pipeline {
     agent any
     stages {
